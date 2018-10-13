@@ -39,8 +39,8 @@ exports.testParser_eat = function (t) {
 };
 
 exports.testParser_ws = function (t) {
-    var p = new Parser('  \n\n   \t\n    foo');
-    t.equal(p.ws(), '  \n\n   \t\n    ');
+    var p = new Parser('  \n\r\n   \t\n    foo');
+    t.equal(p.ws(), '  \n\r\n   \t\n    ');
     t.equal(p.peek(), 'f');
     t.equal(p.ws(), '');
     t.done();

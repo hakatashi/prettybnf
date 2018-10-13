@@ -47,7 +47,7 @@ Parser.prototype.eat = function (expected) {
 // <empty> ::= "";
 Parser.prototype.ws = function () {
     var ret = '', ch;
-    while (' \n\t'.indexOf(ch = this.peek()) >= 0) {
+    while (' \r\n\t'.indexOf(ch = this.peek()) >= 0) {
         if (ch === '\n') {
             this.line++;
             this.linePos = 0;

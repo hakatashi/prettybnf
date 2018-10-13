@@ -78,6 +78,7 @@ exports.testParser_isChar = function (t) {
 exports.testParser_text = function (t) {
     t.equal(new Parser('abc\\"\n').text(), 'abc\"');
     t.equal(new Parser('').text(), '');
+    t.equal(new Parser('あいうえお').text(), 'あいうえお');
     t.done();
 };
 
